@@ -1,0 +1,20 @@
+language: ruby
+cache: bundler
+git:
+  submodules: false
+notifications:
+  email:
+    recipients:
+      - gabrielfalcone@gmail.com
+    on_success: always
+    on_failure: always
+rvm:
+  - "2.0.0"
+
+before_install:
+  - "rm Gemfile.lock"
+
+deploy:
+  provider: heroku
+  api_key: "28af8750-d95e-45c0-97cf-2180e66717e6"
+  app: sticks-web-api
